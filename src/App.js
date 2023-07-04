@@ -11,7 +11,7 @@ const API_URL = 'https://www.omdbapi.com?apikey=b28ae2d2';
 const App = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [movies, setMovies] = useState([]);
-  
+ 
     useEffect(() => { 
       searchMovies("Batman");
     }, []);
