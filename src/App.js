@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // useEffect and useState are the point of React... Updating without refreshing
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import SearchIcon from './search.svg';
 import MovieCard from './MovieCard';
@@ -12,11 +12,11 @@ const App = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [movies, setMovies] = useState([]);
   
-    useEffect(() => {  // Will happen initially because of empty array
+    useEffect(() => { 
       searchMovies("Batman");
     }, []);
   
-    const searchMovies = async (title) => {  // Async because function will take long and this allows other code to happen before
+    const searchMovies = async (title) => {
       const response = await fetch(`${API_URL}&s=${title}`);
       const data = await response.json();
   
@@ -25,7 +25,7 @@ const App = () => {
   
     return (
       <div className="app">
-        <h1>MovieLand</h1>
+        <h1>Movie Land</h1>
   
         <div className="search">
           <input
